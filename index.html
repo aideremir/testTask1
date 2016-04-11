@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+	<!-- Bootstrap -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/tree.css">
+</head>
+<body>
+<div class="container" style="padding-top: 20px">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">Task 1</div>
+		<div class="panel-body">
+
+			Goals:<br>
+			- Create Tree view collapsable multilevel Tree menu based on the data in the db.sql<br>
+			- Implement two modes 1. that will preload the tree and 2. that will preload only master nodes (the ones
+			that have parent_id = 0) and then on expand using AJAX fetch its child nodes.<br>
+			- The structure for implementation can be found in the myTree.class.php<br>
+			- Tree needs to be collapsed completely on the start, images for expand and collapse are in the images
+			folder however, if there are no child nodes please use blank.gif to show that Node does not contain any
+			child nodes.<br><br>
+
+			Rules:<br>
+			- DB structure should no be changed in any way!<br>
+			- Abstract class should not be changed in any way!<br>
+			- All the nodes should be sorted alphabetically.<br>
+			- You should not use any third party PHP library however, you can use any PHP framework.<br>
+			- You can use JS framework like JQuery however, it is forbidden to use plugins that are used to generate
+			Tree View<br>
+			- Code needs to run on PHP 5.3 and above<br>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">Fully loaded tree</div>
+				<div class="panel-body">
+
+					<div id="fullTree"></div>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">Lazy loaded tree</div>
+				<div class="panel-body">
+
+					<div id="lazyTree"></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<script src="js/myTree.js"></script>
+<script>
+
+	$(document).ready(function () {
+
+		$('#fullTree').tree({renderMethod: 'full'});
+		$('#lazyTree').tree({renderMethod: 'lazy'});
+
+	})
+</script>
+
+</body>
+</html>

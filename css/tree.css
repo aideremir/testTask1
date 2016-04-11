@@ -1,0 +1,23 @@
+.tree ul {
+    list-style: none;
+}
+
+.tree ul li.hasChildren {
+    list-style-image: url("../images/blank.gif");
+}
+
+.tree ul li.hasChildren {
+    cursor: pointer;
+}
+
+.tree ul li.hasChildren.collapsed {
+    list-style-image: url("../images/expand.gif");
+}
+
+.tree ul li.hasChildren.expanded {
+    list-style-image: url("../images/collapse.gif");
+}
+
+.tree ul li.hasChildren ul {
+    display: none;
+}
