@@ -1,0 +1,28 @@
+Test 1
+
+Goals: 
+- Create Tree view collapsable multilevel Tree menu based on the data in the db.sql
+- Implement two modes 1. that will preload the tree and 2. that will preload only master nodes (the ones that have parent_id = 0) and then on expand using AJAX fetch its child nodes.
+- The structure for implementation can be found in the myTree.class.php
+- Tree needs to be collapsed completely on the start, images for expand and collapse are in the images folder however, if there are no child nodes please use blank.gif to show that Node does not contain any child nodes.
+
+Rules:
+- DB structure should no be changed in any way!
+- Abstract class should not be changed in any way!
+- All the nodes should be sorted alphabetically.
+- You should not use any third party PHP library however, you can use any PHP framework.
+- You can use JS framework like JQuery however, it is forbidden to use plugins that are used to generate Tree View
+- Code needs to run on PHP 5.3 and above
+
+Result:
+
+The result should be something like this:
+
+- Category 1
+	  One
+	- Two
+		wtf
+		zomg
++ Category 2
++ Category 3
+	
